@@ -1,0 +1,70 @@
+[
+    {
+        "id": "intro",
+        "text": "The forest is quiet. You stand at the edge of a clearing.",
+        "trigger": {
+            "primary": "Neutral"
+        },
+        "next": [
+            "calm_stream",
+            "dark_thicket"
+        ]
+    },
+    {
+        "id": "calm_stream",
+        "text": "A gentle stream flows nearby. The sound of water soothes your mind.",
+        "trigger": {
+            "valence_min": 0.2,
+            "arousal_max": 0.4
+        },
+        "narrative_update": {
+            "story_branch": "peaceful_reflection",
+            "plot_adjustment": "The protagonist finds a moment of respite."
+        }
+    },
+    {
+        "id": "dark_thicket",
+        "text": "Shadows lengthen as you peer into the thicket. Something moves.",
+        "trigger": {
+            "valence_max": -0.2,
+            "arousal_min": 0.5
+        },
+        "narrative_update": {
+            "story_branch": "tension_rise",
+            "plot_adjustment": "Danger lurks in the shadows."
+        }
+    },
+    {
+        "id": "joyful_discovery",
+        "text": "Sunlight breaks through the canopy! A hidden path reveals itself.",
+        "trigger": {
+            "primary": "Joy"
+        },
+        "narrative_update": {
+            "story_branch": "triumph_arc",
+            "plot_adjustment": "A new opportunity arises."
+        }
+    },
+    {
+        "id": "melancholic_rain",
+        "text": "A soft rain begins to fall, washing away the dust of the road.",
+        "trigger": {
+            "primary": "Sadness"
+        },
+        "narrative_update": {
+            "story_branch": "empathy_arc",
+            "plot_adjustment": "The world seems to weep with you."
+        }
+    },
+    {
+        "id": "angry_storm",
+        "text": "Thunder crashes overhead! The wind howls in fury.",
+        "trigger": {
+            "primary": "Anger"
+        },
+        "narrative_update": {
+            "story_branch": "conflict_climax",
+            "plot_adjustment": "Nature mirrors the inner turmoil."
+        }
+    }
+]
